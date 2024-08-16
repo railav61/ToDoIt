@@ -8,15 +8,9 @@ function CreateTodo() {
     if (task.trim() === "") {
     } else {
       axios
-        .post("http://localhost:4000/add", { task: task })
+        .post("https://todoit-awm0.onrender.com/add", { task: task })
         .then((result) => location.reload())
         .catch((err) => console.log(err));
-    }
-  }
-  function handleTask(e) {
-    if (task.trim() === "") {
-    } else {
-      setTask(e.target.value);
     }
   }
   return (
