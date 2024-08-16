@@ -14,7 +14,7 @@ function Home() {
   useEffect(() => {
     setLoading(true);
     axios
-      .get("http://localhost:4000/get")
+      .get("https://todoit-awm0.onrender.com/get")
       .then((result) => setTodos(result.data))
       .catch((err) => console.log(err));
     setLoading(false);
@@ -22,13 +22,13 @@ function Home() {
 
   function handleComplete(id) {
     axios
-      .put("http://localhost:4000/update/" + id)
+      .put("https://todoit-awm0.onrender.com/update/" + id)
       .then((result) => location.reload())
       .catch((err) => console.log(err));
   }
   function handleDelete(id) {
     axios
-      .delete("http://localhost:4000/delete/" + id)
+      .delete("https://todoit-awm0.onrender.com/delete/" + id)
       .then((result) => location.reload())
       .catch((err) => console.log(err));
   }
